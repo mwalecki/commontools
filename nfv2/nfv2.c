@@ -2009,14 +2009,14 @@ void NF_ComBufReset(NF_STRUCT_ComBuf *NFComBuf){
 	// ########	Device
 	// ####		Read Status
 	#ifdef NF_BUFSZ_ReadDeviceStatus
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_ReadDeviceStatus; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_ReadDeviceStatus; combufDataIter++){
 			NFComBuf->ReadDeviceStatus.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->ReadDeviceStatus.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Read Vitals
 	#ifdef NF_BUFSZ_ReadDeviceVitals
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_ReadDeviceVitals; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_ReadDeviceVitals; combufDataIter++){
 			NFComBuf->ReadDeviceVitals.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->ReadDeviceVitals.data[combufDataIter] = 0;
 		}
@@ -2025,91 +2025,91 @@ void NF_ComBufReset(NF_STRUCT_ComBuf *NFComBuf){
 	// ########	Drives
 	// ####		Set Mode
 	#ifdef NF_BUFSZ_SetDrivesMode
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetDrivesMode; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetDrivesMode; combufDataIter++){
 			NFComBuf->SetDrivesMode.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetDrivesMode.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set Speed
 	#ifdef NF_BUFSZ_SetDrivesSpeed
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetDrivesSpeed; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetDrivesSpeed; combufDataIter++){
 			NFComBuf->SetDrivesSpeed.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetDrivesSpeed.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set Current
 	#ifdef NF_BUFSZ_SetDrivesCurrent
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetDrivesCurrent; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetDrivesCurrent; combufDataIter++){
 			NFComBuf->SetDrivesCurrent.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetDrivesCurrent.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set Position
 	#ifdef NF_BUFSZ_SetDrivesPosition
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetDrivesPosition; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetDrivesPosition; combufDataIter++){
 			NFComBuf->SetDrivesPosition.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetDrivesPosition.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set PWM
 	#ifdef NF_BUFSZ_SetDrivesPWM
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetDrivesPWM; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetDrivesPWM; combufDataIter++){
 			NFComBuf->SetDrivesPWM.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetDrivesPWM.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set Max Current
 	#ifdef NF_BUFSZ_SetDrivesMaxCurrent
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetDrivesMaxCurrent; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetDrivesMaxCurrent; combufDataIter++){
 			NFComBuf->SetDrivesMaxCurrent.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetDrivesMaxCurrent.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set Max Speed
 	#ifdef NF_BUFSZ_SetDrivesMaxSpeed
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetDrivesMaxSpeed; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetDrivesMaxSpeed; combufDataIter++){
 			NFComBuf->SetDrivesMaxSpeed.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetDrivesMaxSpeed.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set Min Position
 	#ifdef NF_BUFSZ_SetDrivesMinPosition
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetDrivesMinPosition; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetDrivesMinPosition; combufDataIter++){
 			NFComBuf->SetDrivesMinPosition.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetDrivesMinPosition.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set MaxPosition
 	#ifdef NF_BUFSZ_SetDrivesMaxPosition
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetDrivesMaxPosition; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetDrivesMaxPosition; combufDataIter++){
 			NFComBuf->SetDrivesMaxPosition.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetDrivesMaxPosition.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Read Current
 	#ifdef NF_BUFSZ_ReadDrivesCurrent
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_ReadDrivesCurrent; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_ReadDrivesCurrent; combufDataIter++){
 			NFComBuf->ReadDrivesCurrent.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->ReadDrivesCurrent.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Read Position
 	#ifdef NF_BUFSZ_ReadDrivesPosition
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_ReadDrivesPosition; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_ReadDrivesPosition; combufDataIter++){
 			NFComBuf->ReadDrivesPosition.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->ReadDrivesPosition.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set Misc
 	#ifdef NF_BUFSZ_SetDrivesMisc
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetDrivesMisc; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetDrivesMisc; combufDataIter++){
 			NFComBuf->SetDrivesMisc.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetDrivesMisc.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Read Status
 	#ifdef NF_BUFSZ_ReadDrivesStatus
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_ReadDrivesStatus; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_ReadDrivesStatus; combufDataIter++){
 			NFComBuf->ReadDrivesStatus.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->ReadDrivesStatus.data[combufDataIter] = 0;
 		}
@@ -2117,70 +2117,70 @@ void NF_ComBufReset(NF_STRUCT_ComBuf *NFComBuf){
 	// ########	Servos
 	// ####		Set Mode
 	#ifdef NF_BUFSZ_SetServosMode
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetServosMode; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetServosMode; combufDataIter++){
 			NFComBuf->SetServosMode.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetServosMode.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set Position
 	#ifdef NF_BUFSZ_SetServosPosition
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetServosPosition; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetServosPosition; combufDataIter++){
 			NFComBuf->SetServosPosition.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetServosPosition.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set Speed
 	#ifdef NF_BUFSZ_SetServosSpeed
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetServosSpeed; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetServosSpeed; combufDataIter++){
 			NFComBuf->SetServosSpeed.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetServosSpeed.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set Max Speed
 	#ifdef NF_BUFSZ_SetServosMaxSpeed
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetServosMaxSpeed; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetServosMaxSpeed; combufDataIter++){
 			NFComBuf->SetServosMaxSpeed.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetServosMaxSpeed.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set Min Position
 	#ifdef NF_BUFSZ_SetServosMinPosition
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetServosMinPosition; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetServosMinPosition; combufDataIter++){
 			NFComBuf->SetServosMinPosition.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetServosMinPosition.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set MaxPosition
 	#ifdef NF_BUFSZ_SetServosMaxPosition
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetServosMaxPosition; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetServosMaxPosition; combufDataIter++){
 			NFComBuf->SetServosMaxPosition.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetServosMaxPosition.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Read Current
 	#ifdef NF_BUFSZ_ReadServosCurrent
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_ReadServosCurrent; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_ReadServosCurrent; combufDataIter++){
 			NFComBuf->ReadServosCurrent.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->ReadServosCurrent.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Read Position
 	#ifdef NF_BUFSZ_ReadServosPosition
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_ReadServosPosition; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_ReadServosPosition; combufDataIter++){
 			NFComBuf->ReadServosPosition.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->ReadServosPosition.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set Misc
 	#ifdef NF_BUFSZ_SetServosMisc
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetServosMisc; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetServosMisc; combufDataIter++){
 			NFComBuf->SetServosMisc.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetServosMisc.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Read Status
 	#ifdef NF_BUFSZ_ReadServosStatus
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_ReadServosStatus; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_ReadServosStatus; combufDataIter++){
 			NFComBuf->ReadServosStatus.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->ReadServosStatus.data[combufDataIter] = 0;
 		}
@@ -2189,14 +2189,14 @@ void NF_ComBufReset(NF_STRUCT_ComBuf *NFComBuf){
 	// ########	Digital IO	 
 	// ####		Read Inputs
 	#ifdef NF_BUFSZ_ReadDigitalInputs
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_ReadDigitalInputs; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_ReadDigitalInputs; combufDataIter++){
 			NFComBuf->ReadDigitalInputs.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->ReadDigitalInputs.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set Outputs
 	#ifdef NF_BUFSZ_SetDigitalOutputs
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetDigitalOutputs; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetDigitalOutputs; combufDataIter++){
 			NFComBuf->SetDigitalOutputs.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetDigitalOutputs.data[combufDataIter] = 0;
 		}
@@ -2205,7 +2205,7 @@ void NF_ComBufReset(NF_STRUCT_ComBuf *NFComBuf){
 	// ########	Analog IO
 	// ####		Read Inputs
 	#ifdef NF_BUFSZ_ReadAnalogInputs
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_ReadAnalogInputs; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_ReadAnalogInputs; combufDataIter++){
 			NFComBuf->ReadAnalogInputs.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->ReadAnalogInputs.data[combufDataIter] = 0;
 		}
@@ -2214,7 +2214,7 @@ void NF_ComBufReset(NF_STRUCT_ComBuf *NFComBuf){
 	// ########	Sensors
 	// ####		Read Distance
 	#ifdef NF_BUFSZ_ReadDistance
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_ReadDistance; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_ReadDistance; combufDataIter++){
 			NFComBuf->ReadDistance.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->ReadDistance.data[combufDataIter] = 0;
 		}
@@ -2223,21 +2223,21 @@ void NF_ComBufReset(NF_STRUCT_ComBuf *NFComBuf){
 	// ########	Display
 	// ####		Set Mode
 	#ifdef NF_BUFSZ_SetDisplayMode
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetDisplayMode; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetDisplayMode; combufDataIter++){
 			NFComBuf->SetDisplayMode.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetDisplayMode.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set Text
 	#ifdef NF_BUFSZ_SetDisplayText
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetDisplayText; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetDisplayText; combufDataIter++){
 			NFComBuf->SetDisplayText.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetDisplayText.data[combufDataIter] = 0;
 		}
 	#endif
 	// ####		Set Backlight
 	#ifdef NF_BUFSZ_SetDisplayBacklight
-		for(combufDataIter=0; combufDataIter<NF_DATABYTES_SetDisplayBacklight; combufDataIter++){
+		for(combufDataIter=0; combufDataIter<NF_BUFSZ_SetDisplayBacklight; combufDataIter++){
 			NFComBuf->SetDisplayBacklight.addr[combufDataIter] = NF_BroadcastAddress;
 			NFComBuf->SetDisplayBacklight.data[combufDataIter] = 0;
 		}

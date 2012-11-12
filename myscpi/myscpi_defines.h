@@ -10,12 +10,17 @@
 
 #define _PRINT_INT_RESPONSE(v)													\
 	{																			\
-		*txCnt = my_itoa_crlf(v, (char*)txBuf, 10);						\
+		*txCnt = my_itoa(v, (char*)txBuf, 10);						\
+		txBuf[(*txCnt)++] = '\r';												\
+		txBuf[(*txCnt)++] = '\n';												\
 	}
 
 #define _PRINT_STR_RESPONSE(v)													\
 	{																			\
 		strcpy((char*)txBuf, v);												\
+		*txCnt = strlen(v);												\
+		txBuf[(*txCnt)++] = '\r';												\
+		txBuf[(*txCnt)++] = '\n';												\
 	}
 
 #define _GROUP(grName)															\
