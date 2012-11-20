@@ -101,6 +101,7 @@ typedef struct{
 #define NF_DrivesMode_POSITION		0x04
 #define NF_DrivesMode_PWM			0x05
 #define NF_DrivesMode_SYNC_PWM0		0x10
+#define NF_DrivesMode_SYNC_AUTO		0x11
 #endif
 // ####		Set Speed
 #ifdef NF_BUFSZ_SetDrivesSpeed
