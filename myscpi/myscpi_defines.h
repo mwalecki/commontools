@@ -1,10 +1,12 @@
 #define RXBUFSZ 20
 
-//#define _PRINT_RESPONSE(...)													\
-//	{																			\
-//		sprintf((char*)txBuf, __VA_ARGS__);										\
-//		*txCnt = strlen((const char*)txBuf);									\
-//	}
+/*
+#define _PRINT_RESPONSE(...)													\
+	{																			\
+		sprintf((char*)txBuf, __VA_ARGS__);										\
+		*txCnt = strlen((const char*)txBuf);									\
+	}
+*/
 
 #define _PRINT_RESPONSE _PRINT_INT_RESPONSE
 
