@@ -616,6 +616,7 @@ uint8_t NF_Interpreter(NF_STRUCT_ComBuf *NFComBuf, uint8_t *rxBuf, uint8_t *rxPt
 uint8_t NF_MakeCommandFrame(NF_STRUCT_ComBuf *NFComBuf, uint8_t *txBuf, const uint8_t *commandArray, uint8_t commandCnt, uint8_t addr);
 void NF_ComBufReset(NF_STRUCT_ComBuf *NFComBuf);
 void NFv2_Config(NF_STRUCT_ComBuf *NFComBuf, uint8_t myAddress);
+void NFv2_Config2(NF_STRUCT_ComBuf *NFComBuf, uint8_t myAddress, uint8_t deviceAddress);
 
 #ifdef __cplusplus
 }
